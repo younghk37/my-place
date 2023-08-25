@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import { Reset } from 'styled-reset';
 import './App.css';
+/** @jsxImportSource @emotion/react */
+import { Global, css } from "@emotion/react";
+import { GSCommon } from "./styles/common";
+import Header from './components/Header/Header';
+
+const SLayout = css`
+
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Reset />
+      <Global styles={GSCommon} />
+      <div css={SLayout}>
+        <Header />
+      </div>
+    </>
   );
 }
 
