@@ -5,6 +5,8 @@ import { FaRegShareFromSquare } from 'react-icons/fa6';
 
 function HeaderUserInfo({props}) {
 
+    const isLogined = false;
+
     const userName = "younghk37";
     const profileImgURL = "\\images\\profile_img.png";
     const reviewCount = 0;
@@ -19,7 +21,7 @@ function HeaderUserInfo({props}) {
                     <img css={S.SProfileImg} src={profileImgURL} alt="profile img" />
                 </div>
             </div>
-            <div>
+            <div css={S.SHide(!isLogined)}>
                 <div css={S.STitleContainer}>
                     <span css={S.SUserNameText}>
                         {userName}
@@ -44,6 +46,16 @@ function HeaderUserInfo({props}) {
                     <button>
                         <div>팔로워</div>
                         <div>{followerCount}</div>
+                    </button>
+                </div>
+            </div>
+            <div css={S.SHide(isLogined)}>
+                <div css={S.STitleContainer}>
+                    <span css={S.SLoginText}>
+                        로그인하기
+                    </span>
+                    <button css={S.SRightArrow}>
+                        {">"}
                     </button>
                 </div>
             </div>

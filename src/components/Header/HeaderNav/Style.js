@@ -23,6 +23,7 @@ export const SButton = (isSelected) => {
     padding: 14px 5px;
     height: 100%;
     font-size: 17px;
+    text-decoration-line: none;
     color: rgba(255,255,255,.7);
     background-color: #06b495;
     ${isSelected ? "border-bottom: 2px solid #FFFFFF;" : ""}

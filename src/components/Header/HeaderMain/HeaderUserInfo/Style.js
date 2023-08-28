@@ -37,6 +37,10 @@ export const SProfileImg = css`
     height: 100%;
 `;
 
+export const SHide = (isHidden) => css`
+    ${isHidden ? "display: none;" : ""}
+`;
+
 export const STitleContainer = css`
     width: 248px;
     height: 26px;
@@ -87,4 +91,14 @@ export const SUserInfoContainer = css`
         font-size: 17px;
         color: #FFFFFF;
     }
+`;
+
+export const SLoginText = css`
+    color: white;
+`;
+
+export const SRightArrow = css`
+    border: none;
+    color: white;
+    background-color: inherit;
 `;

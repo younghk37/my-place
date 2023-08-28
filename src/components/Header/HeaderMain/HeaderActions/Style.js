@@ -20,9 +20,11 @@ export const SLayout = css`
 export const SReviewButton = css`
     width: 226px;
     height: 38px;
+    font-size: 15px;
 `;
 
 export const SMissionButton = css`
     width: 102px;
     height: 38px;
+    font-size: 15px;
 `;

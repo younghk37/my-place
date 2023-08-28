@@ -1,21 +1,19 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import * as S from "./Style";
-import { useRecoilState } from 'recoil';
-import { pathState } from '../../../store/currentPathStore';
+import { Link, useLocation } from 'react-router-dom';
 
 function HeaderNav(props) {
-
-    const [ path, setPath ] = useRecoilState(pathState);
+    const pathName = useLocation().pathname;
 
     return (
         <nav css={S.SLayout}>
             <div css={S.SContainer}>
-                <button css={S.SButton(path === "/feed")} onClick={() => setPath("/feed")}>피드</button>
-                <button css={S.SButton(path === "/timeLine")} onClick={() => setPath("/timeLine")}>타임라인</button>
-                <button css={S.SButton(path === "/review")} onClick={() => setPath("/review")}>리뷰</button>
-                <button css={S.SButton(path === "/reservationOrOrder")} onClick={() => setPath("/reservationOrOrder")}>예약·주문</button>
-                <button css={S.SButton(path === "/save")} onClick={() => setPath("/save")}>저장</button>
+                <Link css={S.SButton(pathName === "/feed")} to={"/feed"}>피드</Link>
+                <Link css={S.SButton(pathName === "/timeLine")} to={"/timeLine"}>타임라인</Link>
+                <Link css={S.SButton(pathName === "/review")} to={"/review"}>리뷰</Link>
+                <Link css={S.SButton(pathName === "/reservationOrOrder")} to={"/reservationOrOrder"}>예약·주문</Link>
+                <Link css={S.SButton(pathName === "/save")} to={"/save"}>저장</Link>
             </div>
         </nav>
     );
