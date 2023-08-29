@@ -20,9 +20,12 @@ export const SButtons = css`
 `;
 
 export const SButton = (isSelected) => css`
+    border: 1px solid #eaeef2;
     border-radius: 19px;
     padding: 0 13px;
-    height: 42px;
-    ${isSelected ? 'color:white;' : 'color:black;'}
-    ${isSelected ? 'background-color: #2d8dee;' : 'background-color:#FFFFFF'}
+    height: 35px;
+    font-size: 14px;
+    cursor: pointer;
+    ${isSelected ? 'color: #FFFFFF;' : 'color:black;'}
+    ${isSelected ? 'background-color: #424242;' : 'background-color:#FFFFFF'}
 `;

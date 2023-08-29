@@ -42,6 +42,8 @@ export const SHide = (isHidden) => css`
 `;
 
 export const STitleContainer = css`
+    display: flex;
+    align-items: center;
     width: 248px;
     height: 26px;
 `;

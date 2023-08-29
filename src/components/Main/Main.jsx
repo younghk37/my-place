@@ -2,9 +2,9 @@ import React from 'react';
 /** @jsxImportSource @emotion/react */
 import * as S from "./Style";
 import { Route, Routes, Navigate } from 'react-router-dom';
-import Feed from './Feed/Feed';
-import TimeLine from './TimeLine/TimeLine';
-import Review from './Review/Review';
+import Feed from '../../pages/Feed/Feed';
+import TimeLine from '../../pages/TimeLine/TimeLine';
+import Review from '../../pages/Review/Review';
 
 function Main(props) {
     return (

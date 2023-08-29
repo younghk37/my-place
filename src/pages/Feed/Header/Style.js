@@ -19,6 +19,8 @@ export const SButtons = css`
     justify-content: flex-start;
     width: 622px;
     & div {
+        display: flex;
+        align-items: center;
         padding: 6px 0 6px 8px;
     }
     & div:nth-of-type(1) {
@@ -38,6 +40,7 @@ export const SButton = (isSelected) => css`
     padding: 0 13px;
     height: 42px;
     font-size: 15px;
+    cursor: pointer;
     ${isSelected ? 'font-weight: 600;' : ''}
     ${isSelected ? 'color:white;' : 'color:black;'}
     ${isSelected ? 'box-shadow: 0 2px 6px 0 rgba(37,146,255,.35);' : 'box-shadow: 0 2px 6px rgba(0,0,0,.06);'}
@@ -50,9 +53,8 @@ export const SButton = (isSelected) => css`
 `;
 
 export const SLocationButtonContainer = css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    padding: 12px 16px 12px 20px;
 `;
 
 export const SLocationButton = css`
@@ -65,6 +67,16 @@ export const SLocationButton = css`
     font-weight: 600;
     color: #7F8DAA;
     background-color: inherit;
+    cursor: pointer;
+    &::before {
+        position: absolute;
+        left: 8px;
+        border-radius: 2px;
+        width: 2px;
+        height: 24px;
+        content: "";
+        background-color: #e2e5e8;
+    }
     & :nth-of-type(1){
         margin-right: 4px;
     }
