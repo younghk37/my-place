@@ -9,6 +9,7 @@ import Main from './components/Main/Main';
 import Modal from './components/Modal/Modal';
 import { useRecoilState } from 'recoil';
 import { isModalOpenState } from './store/modalStatusStore';
+import { isReportMenuOpenState } from './store/reportMenuStore';
 
 const SLayout = css`
   
@@ -17,12 +18,13 @@ const SLayout = css`
 function App() {
   
   const [ isModalOpen ] = useRecoilState(isModalOpenState);
+  const [ isReportMenuOpen, setIsReportMenuOpen ] = useRecoilState(isReportMenuOpenState);
 
   return (
     <>
       <Reset />
       <Global styles={GSCommon(isModalOpen)} />
-      <div css={SLayout}>
+      <div css={SLayout} onClick={() => {setIsReportMenuOpen(false);}}>
         <Header />
         <Main />
         <Footer />

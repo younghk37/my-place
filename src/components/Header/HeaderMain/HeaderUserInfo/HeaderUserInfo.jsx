@@ -8,7 +8,7 @@ function HeaderUserInfo({props}) {
     const isLogined = false;
 
     const userName = "younghk37";
-    const profileImgURL = "\\images\\profile_img.png";
+    const profileImgURL = "\\images\\profile\\profile_img.png";
     const reviewCount = 0;
     const photoCount = 0;
     const followingCount = 0;

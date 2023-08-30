@@ -103,6 +103,7 @@ export const SUserInfoContainer = css`
 `;
 
 export const SActionContainer = css`
+    position: relative;
     & * {
         cursor: pointer;
     }
@@ -122,6 +123,29 @@ export const SActionContainer = css`
     }
 `;
 
+export const SReport = (isVisible) => css`
+    ${isVisible ? '' : 'display: none;'}
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    border: 1px solid #dee0e2;
+    border-radius: 18px;
+    width: 184px;
+    height: 114px;
+    background-color: #FFFFFF;
+    & div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 17px;
+        height: 56px;
+        color: #333;
+    }
+    & div:nth-of-type(1) {
+        border-bottom: 1px solid #eaeef2;
+    }
+`;
+
 export const SItemImg = css`
     border-radius: 8px;
     height: 360px;
@@ -135,6 +159,7 @@ export const SItemImg = css`
 export const SItemContent = css`
     margin-top: 10px;
     font-size: 15px;
+    white-space: pre-wrap;
     color: #666;
 `;
 
@@ -181,10 +206,6 @@ export const SItemLocationInfo = css`
     padding: 13px 16px 12px 15px;
 `;
 
-export const SLocationInfoMain = css`
-
-`;
-
 export const SLocationTitle = css`
     & div:nth-of-type(1) {
         font-size: 16px;
@@ -202,17 +223,81 @@ export const SSaveButtonContainer = css`
     display: flex;
     flex-direction: column;
     align-items: center;
+    & * {
+        font-size: 11px;
+        cursor: pointer;
+    }
+    & svg:nth-of-type(1) {
+        width: 18px;
+        height: 18px;
+        color: #8F8F8F;
+    }
+    & button:nth-of-type(1) {
+        margin-top: 6px;
+        border: none;
+        color: #8F8F8F;
+        background-color: inherit;
+    }
 `;
 
 export const SLocationInfoAdditional = css`
-
+    display: none;
 `;
 
-export const SAd = (isFirstItem) => css`
+export const SAdContainer = (isFirstItem) => css`
     display: none;
     ${isFirstItem ? `
         display: flex;
         justify-content: center;
+    ` : ''}
+`;
 
-        ` : ''}
+export const SAdContentContainer = css`
+    display: flex;
+    border-radius: 8px;
+    padding: 20px 18px 20px 17px;
+    width: 680px;
+    height: 84px;
+    text-decoration-line: none;
+    background: linear-gradient(50.54deg,#4c73ff 1.52%,#5ca7ff 100.44%);
+`;
+
+export const AdLeft = css`
+    display: flex;
+    flex-grow: 1;
+`;
+
+export const AdIcon = css`
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    & * {
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+export const AdText = css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & div:nth-of-type(1) {
+        color: rgba(255,255,255,.72);
+    }
+    & div:nth-of-type(2) {
+        font-weight: 900;
+        color: #fff;
+    }
+    & div:nth-of-type(2) em {
+        color: #ffb7e2;
+    }
+`;
+
+export const AdRight = css`
+    display: flex;
+    align-items: center;
+    transform: scaleY(1.5);
+    color: #FFFFFF;
+    
 `;
